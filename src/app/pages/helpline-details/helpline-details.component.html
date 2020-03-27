@@ -1,0 +1,27 @@
+<div class="jumbotron">
+    <div class="container text-center">
+        <h2><u>Helpline details-</u></h2>
+        <h4>Primary no- <span class="text-danger">{{primary.number}}</span></h4>
+        <h4>Email- <span class="text-danger">{{primary.email}}</span></h4>
+        <p><b>Twitter-</b> <a href="{{primary.twitter}}">{{primary.twitter}}</a></p>
+        <p><b>FB-</b> <a href="{{primary.facebook}}">{{primary.facebook}}</a></p>
+    </div>
+</div>
+<div class="container text-center">
+    <h3><u>Statewise Details</u></h3>
+    <p>Filter:- <input class="form-control" placeholder="Region Name" [(ngModel)]="filterText"/></p> 
+    <table class="table table-responsive">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Region</th>
+                <th scope="col">Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let region of regions|sortState:filterText:'helpline'">
+                <td>{{region.loc}}</td>
+                <td><span class="text-primary">{{region.number}}</span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,17 @@
+.bgrnd{
+  background-image: url('../../../assets/india-fights-covid-19.jpeg');
+  /* background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; */
+    /* Full height */
+    height: 100vh;
+    margin: auto;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.jumbotron{
+  background-color: rgba(233,236,239,0.9);
+}

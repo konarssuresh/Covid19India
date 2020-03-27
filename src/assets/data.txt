@@ -1,0 +1,45 @@
+https://rapidapi.com/api-sports/api/covid-193/details -- api used for corona data
+
+
+
+api-covid-19-india
+API for COVID-19 stats in India, sourced from The Ministry of Health and Family Welfare and separately from unofficial sources
+
+API
+Official data
+Case counts:
+https://api.rootnet.in/covid19-in/stats/latest
+https://api.rootnet.in/covid19-in/stats/history
+Testing stats:
+https://api.rootnet.in/covid19-in/stats/testing/latest
+https://api.rootnet.in/covid19-in/stats/testing/history
+https://api.rootnet.in/covid19-in/stats/testing/raw
+Hospitals & bed stats: https://api.rootnet.in/covid19-in/stats/hospitals
+Contact & helpline: https://api.rootnet.in/covid19-in/contacts
+Notifications & advisories: https://api.rootnet.in/covid19-in/notifications
+Unofficial data
+Unofficial sources: https://api.rootnet.in/covid19-in/unofficial/sources
+Unofficial patient tracing data: https://api.rootnet.in/covid19-in/unofficial/covid19india.org
+Unofficial statewise: https://api.rootnet.in/covid19-in/unofficial/covid19india.org/statewise
+Unofficial statewise history: https://api.rootnet.in/covid19-in/unofficial/covid19india.org/statewise/history
+Unofficial patient travel history: https://api.rootnet.in/covid19-in/unofficial/covid19india.org/travelhistory
+Maintenance
+Refresh the data from source (maintainer only) https://api.rootnet.in/covid19-in/refresh
+Sources
+Post Mar 15, data is from The Ministry of Health & Family Welfare
+Pre Mar 15, data is sourced from datameet/covid19
+Hospital & bed data: https://api.steinhq.com/v1/storages/5e732accb88d3d04ae0815ae/StateWiseHealthCapacity
+ICMR testing stats API: https://api.steinhq.com/v1/storages/5e6e3e9fb88d3d04ae08158c/ICMRTestData
+Unofficial sources
+The awesome volunteer driven patient tracing data covid19india.org
+API (NLP): http://coronatravelhistory.pythonanywhere.com/
+API (Travel history): https://api.covid19india.org/travel_history.json
+For contributors
+This is created using Cloudflare Wrangler, and hosted on Cloudflare
+
+Credits
+Awesome team at covid19india.org
+Hospital data API from @NirantK
+ICMR testing data API from @NirantK
+NLP data API from @meghanabhange and @NirantK
+@GalacticMaster for reporting updated contact details

@@ -1,0 +1,39 @@
+<div class="jumbotron">
+    <div class="container text-center">
+        <h3>Total Hospitals- <span class="text-primary">{{summary.totalHospitals}}</span></h3>
+        <h3>Rural Hospitals- <span class="text-primary">{{summary.ruralHospitals}}</span></h3>
+        <h3>Rural Beds- <span class="text-primary">{{summary.ruralBeds}}</span></h3>
+        <h3>Urban Hospitals- <span class="text-primary">{{summary.urbanHospitals}}</span></h3>
+        <h3>urban Beds- <span class="text-primary">{{summary.urbanBeds}}</span></h3>
+
+        <p>Hospital details are taken from -<a href="{{source[0].url}}">{{source[0].url}}</a></p>
+    </div>
+</div>
+<div class="container text-center">
+    <h3><u>Statewise Details</u></h3>
+    <p>Filter:- <input class="form-control" placeholder="Region Name" [(ngModel)]="filterText"/></p> 
+    <table class="table table-responsive">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Loc.</th>
+                <th scope="col" class="d-none d-lg-table-cell">Rural Hospitals</th>
+                <th scope="col">Rural Beds</th>
+                <th scope="col" class="d-none d-lg-table-cell">Urban Hospitals</th>
+                <th scope="col">Urban Beds</th>
+                <th scope="col" class="d-none d-lg-table-cell"><span class="text-primary"><b>Total Hospitals</b></span></th>
+                <th scope="col"><span class="text-primary"><b>Total Beds</b></span></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let region of regions|sortState:filterText:'hospitals'">
+                <td scope="row">{{region.state}}</td>
+                <td class="d-none d-lg-table-cell">{{region.ruralHospitals}}</td>
+                <td>{{region.ruralBeds}}</td>
+                <td class="d-none d-lg-table-cell">{{region.urbanHospitals}}</td>
+                <td>{{region.urbanBeds}}</td>
+                <td class="d-none d-lg-table-cell"><span class="text-primary"><b>{{region.totalHospitals}}</b></span></td>
+                <td><span class="text-primary"><b>{{region.totalBeds}}</b></span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,13 @@
+<div class="bgrnd">
+<div class="container">
+    <div class="jumbotron text-center">
+        <h3><u>Current Official COVID-19 details of India-</u></h3>
+        <h2>Confirmed Cases:- <span class="text-primary">{{summary.total}}</span></h2>
+        <h2>Active Cases:- <span class="text-warning">{{summary.total-summary.discharged-summary.deaths}}</span></h2>
+        <h2>Discharged:- <span class="text-success">{{summary.discharged}}</span></h2>
+        <h2>Deaths:- <span class="text-danger">{{summary.deaths}}</span></h2>
+        <h2>Death %:- <span class="text-danger">{{(summary.deaths/summary.total) | percent:'1.2-3'}}</span></h2>
+        <a [routerLink]="'/stateStats'" class="btn btn-primary btn-lg">Statewise Details</a>
+    </div>
+</div>
+</div>
