@@ -43,3 +43,14 @@ Hospital data API from @NirantK
 ICMR testing data API from @NirantK
 NLP data API from @meghanabhange and @NirantK
 @GalacticMaster for reporting updated contact details
+
+today todo list:-
+* add last updated time details in the web page.
+* add the page links in the footer.
+* corousel auto move images.
+* font change
+* A bit of animation
+
+next version:-
+* try to add svg map with clickable details.
+* try to add a page for global covid 19 details.

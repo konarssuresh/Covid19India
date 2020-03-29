@@ -8,6 +8,8 @@
         <h2>Deaths:- <span class="text-danger">{{summary.deaths}}</span></h2>
         <h2>Death %:- <span class="text-danger">{{(summary.deaths/summary.total) | percent:'1.2-3'}}</span></h2>
         <a [routerLink]="'/stateStats'" class="btn btn-primary btn-lg">Statewise Details</a>
+        <p class="text-primary">Last updated on {{lastUpdated|date:'medium'}}</p>
+        <hr>
     </div>
 </div>
 </div>

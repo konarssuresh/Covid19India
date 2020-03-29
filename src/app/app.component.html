@@ -1,22 +1,88 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" [routerLink]="'/dashboard'">
-      <img src="../assets/corona-virus.ico" width="30" height="30" alt=""/> COVID19-IND</a>
+      <img src="../assets/corona-virus.ico" width="30" height="30" alt=""/> Covid19India</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-item nav-link active" [routerLink]="'/stateStats'">StateStats</a>
-        <a class="nav-item nav-link active" [routerLink]="'/hospitalStats'">HospitalStats</a>
-        <a class="nav-item nav-link active" [routerLink]="'/helpline'">Helpline</a>
+        <a class="nav-item nav-link active" [routerLink]="'/stateStats'">Statewise Covid19 Details</a>
+        <a class="nav-item nav-link active" [routerLink]="'/hospitalStats'">Hospitals In India</a>
+        <a class="nav-item nav-link active" [routerLink]="'/helpline'">Statewise Helpline Numbers</a>
         <a class="nav-item nav-link active" [routerLink]="'/faqs'" >FAQs</a>
       </div>
     </div>
   </nav>
 <router-outlet></router-outlet>
 
-<footer class="page-footer font-small  special-color-dark pt-4">
+<!-- <footer class="page-footer font-small  special-color-dark pt-4">
+<footer id="sticky-footer" class="py-4 bg-dark text-white-50">
   <div class="footer-copyright text-center py-3">© 2020 :
     <a href="https://github.com/konarssuresh/Covid19India">Repository</a>
   </div>
+</footer> -->
+
+<footer class="page-footer font-small bg-dark text-white-50 pt-4">
+
+  <!-- Footer Links -->
+  <div class="container-fluid text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 mt-3">
+
+        <!-- Content -->
+        <h5 class="text-uppercase">DECLARATION</h5>
+        <p class="text-justify">The counts has been taken as per the official website of Ministry of Health and Family Welfare(mohfw) and 
+          is  updated time to time as the data is updated in the site.</p>
+        <p class="text-justify">To see the statewise Hospitals counts and hospital beds count ,<a [routerLink]="'/helpline'">Click Here</a> </p>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none pb-3">
+
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-3 mb-md-0 mb-3">
+
+        <!-- Links -->
+        <h5 class="text-uppercase">Links</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a [routerLink]="'/stateStats'">Statewise Covid19 Details</a>
+          </li>
+          <li>
+            <a [routerLink]="'/hospitalStats'">Hospitals In India</a>
+          </li>
+          <li>
+            <a [routerLink]="'/helpline'">Statewise Helpline Numbers</a>
+          </li>
+          <li>
+            <a [routerLink]="'/faqs'">FAS's</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020:
+    <a href="https://github.com/konarssuresh/Covid19India"> Covid19India</a>
+  </div>
+  <!-- Copyright -->
+
 </footer>
+<!-- Footer -->

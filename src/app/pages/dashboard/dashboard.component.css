@@ -4,7 +4,7 @@
   background-attachment: fixed;
   background-position: center; */
     /* Full height */
-    height: 100vh;
+    /* height: 100%; */
     margin: auto;
     /* Center and scale the image nicely */
     background-position: center;
@@ -14,4 +14,5 @@
 
 .jumbotron{
   background-color: rgba(233,236,239,0.9);
+  margin: 0,0,0,0;
 }

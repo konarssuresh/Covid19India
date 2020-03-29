@@ -26,6 +26,7 @@
   </div>
   
   <div *ngIf="stateDetails" class="container text-center">
+      <p class="text-primary">Last updated on {{lastUpdated|date:'medium'}}</p>
       <h3><u>Statewise Details</u></h3>
       <p>Filter:- <input class="form-control" placeholder="Region Name" [(ngModel)]="filterText"/></p> 
       <div class="table-responsive">
