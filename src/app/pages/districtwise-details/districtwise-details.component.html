@@ -1,0 +1,38 @@
+
+<div class="text-center" *ngIf="districtWiseData.length>0" >
+    <ngb-accordion #myaccordion="ngbAccordion"
+    closeOthers="true">
+        <ngb-panel *ngFor="let stateData of districtWiseData|sortState:'':'statewiseDistrictData'"  id="{{stateData.stateName}}" (click)="togglePanel(stateData.stateName)">
+            <ng-template ngbPanelTitle>
+                <span>&#9733; <b>{{stateData.stateName}}</b> &#9733;</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Loc.</th>
+                                <th scope="col">Conf</th>
+                                <th scope="col">Act</th>
+                                <th scope="col">Disch</th>
+                                <th scope="col">Death</th>
+                                <th scope="col" class="d-none d-lg-table-cell">Death %</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let district of stateData.districtDetails|sortState:'':'districtData'">
+                                    <td scope="row">{{district.districtName}}</td>
+                                    <td><span class="text-primary">{{district.total}}</span></td>
+                                    <td><span class="text-warning">{{district.active}}</span></td>
+                                    <td><span class="text-success">{{district.discharged}}</span></td>
+                                    <td><span class="text-danger">{{district.deceased}}</span></td>
+                                    <td class="d-none d-lg-table-cell"><span class="text-danger">{{(district.deceased/district.total) | percent:'1.2-3'}}</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                  </div>
+            </ng-template>
+        </ngb-panel>
+
+    </ngb-accordion>
+</div>

@@ -5,6 +5,7 @@ import { StatewisDetailsComponent } from './pages/statewis-details/statewis-deta
 import { HospitalDetailsComponent } from './pages/hospital-details/hospital-details.component';
 import { FAQsComponent } from './pages/faqs/faqs.component';
 import { HelplineDetailsComponent } from './pages/helpline-details/helpline-details.component';
+import { DistrictwiseDetailsComponent } from './pages/districtwise-details/districtwise-details.component';
 
 
 const routes: Routes = [
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path:"stateStats",component: StatewisDetailsComponent},
   {path:"hospitalStats",component:HospitalDetailsComponent},
   {path:"faqs",component:FAQsComponent},
-  {path:"helpline",component: HelplineDetailsComponent}
+  {path:"helpline",component: HelplineDetailsComponent},
+  {path:"districtStats",component:DistrictwiseDetailsComponent}
 ];
 
 @NgModule({

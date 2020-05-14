@@ -17,6 +17,13 @@ export class IndianStatusApiService {
       catchError(this.handleError)
     )
   }
+
+  public  getLatestDistrictStatusofIndia() :Observable<any>{
+    return this.http.get("https://api.covid19india.org/state_district_wise.json").pipe(
+      tap(data => console.log('Data Fetched:' + JSON.stringify(data))),
+      catchError(this.handleError)
+    )
+  }
   
   public getUnOfficialStatusOfInfia():Observable<any>{
     return this.http.get("https://api.rootnet.in/covid19-in/unofficial/covid19india.org/statewise").pipe(

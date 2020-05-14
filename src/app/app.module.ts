@@ -13,6 +13,8 @@ import { FAQsComponent } from './pages/faqs/faqs.component';
 import { HospitalDetailsComponent } from './pages/hospital-details/hospital-details.component';
 import { HelplineDetailsComponent } from './pages/helpline-details/helpline-details.component';
 import {FormsModule} from '@angular/forms';
+import { DistrictwiseDetailsComponent } from './pages/districtwise-details/districtwise-details.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -22,13 +24,15 @@ import {FormsModule} from '@angular/forms';
     SortStatePipe,
     FAQsComponent,
     HospitalDetailsComponent,
-    HelplineDetailsComponent
+    HelplineDetailsComponent,
+    DistrictwiseDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [IndianStatusApiService,GlobalStatusApiService],
   bootstrap: [AppComponent]

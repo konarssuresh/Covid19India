@@ -52,6 +52,37 @@ export class SortStatePipe implements PipeTransform {
       }
     }
 
+    if(type=="statewiseDistrictData"){
+      if(value&& value.length>0){
+        console.log("inside if condition");
+        value.sort((left,right)=>{
+          const leftSum = left.districtDetails.reduce((acc,item)=>{
+            return acc+item.active;
+          },0);
+          const rightSum=right.districtDetails.reduce((acc,item)=>{
+            return acc+item.active;
+          },0);
+          if(leftSum<rightSum){
+            return 1;
+          }else{
+            return -1;
+          }
+        })
+      }
+    }
+
+    if(type=="districtData"){
+      if(value && value.length>0){
+        value.sort((left,right)=>{
+          if(left.active<right.active){
+            return 1;
+          }else{
+            return -1
+          }
+        })
+    }
+  }
+
 
     return value;
   }
