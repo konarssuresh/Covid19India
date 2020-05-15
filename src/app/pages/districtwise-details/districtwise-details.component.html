@@ -1,8 +1,9 @@
 
 <div class="text-center" *ngIf="districtWiseData.length>0" >
+    <p>Filter:- <input class="form-control" placeholder="State/UT name" [(ngModel)]="filterText"/></p> 
     <ngb-accordion #myaccordion="ngbAccordion"
     closeOthers="true">
-        <ngb-panel *ngFor="let stateData of districtWiseData|sortState:'':'statewiseDistrictData'"  id="{{stateData.stateName}}" (click)="togglePanel(stateData.stateName)">
+        <ngb-panel *ngFor="let stateData of districtWiseData|sortState:filterText:'statewiseDistrictData'"  id="{{stateData.stateName}}" (click)="togglePanel(stateData.stateName)">
             <ng-template ngbPanelTitle>
                 <span>&#9733; <b>{{stateData.stateName}}</b> &#9733;</span>
             </ng-template>

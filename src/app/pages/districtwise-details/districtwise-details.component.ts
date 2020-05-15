@@ -12,6 +12,7 @@ import { NgbPanelChangeEvent, NgbAccordion } from '@ng-bootstrap/ng-bootstrap';
 export class DistrictwiseDetailsComponent implements OnInit {
 
   districtWiseData:State[];
+  filterText:string;
   @ViewChild('myaccordion', {static : true}) accordion: NgbAccordion;
   constructor(private indianStatusService:IndianStatusApiService) {
     this.districtWiseData=[];

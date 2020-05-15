@@ -54,7 +54,15 @@ export class SortStatePipe implements PipeTransform {
 
     if(type=="statewiseDistrictData"){
       if(value&& value.length>0){
-        console.log("inside if condition");
+
+        if(textfilter){
+          value=value.filter((data)=>{
+            if(!data.stateName.toLowerCase().search(textfilter.toLowerCase())){
+              return true;
+            }
+          })
+        }
+
         value.sort((left,right)=>{
           const leftSum = left.districtDetails.reduce((acc,item)=>{
             return acc+item.active;
